@@ -15,6 +15,13 @@
 oading畫面，並未使用排版功能。
 
 |  Header   | 請使用 position: fixed 實作, Icon不需要設定任何動作  |
-|  ----  | ----  |
-| 单元格  | 单元格 |
-| 单元格  | 单元格 |
+|  Input  | 不一定要綁在最下方，可跟著 Todo list 長, 可使用鍵盤的 enter 鍵或是點 button 送出  |
+| 右側送出按鈕 | 送出時，請顯示出 loading 或 skeleton 後等待數秒後 |
+| 垃圾桶  | 需模擬刪除時使用 API 進行刪除的狀況 |
+
+## 其他
+* 加上 i18n : 目前公司已有實作，因此沒特別實作但知道Nuxt Module有支援，主要是透過先設定好對應的字串內容，透過`$t('...')`做不同國家語言切換。
+* 將 icons 加到 component 中：有加入，並使用SVG。
+* 使用 scss 並使用 mixin 或是 global styles：有設定global變數，並將 `border` 的設定設為 `mixin`。
+* 納入 Vuetify 框架使用 loading 特效。
+* 使用 Nuxt Firebase Module 將 Todo List 內容新增到 Firebase 上。
