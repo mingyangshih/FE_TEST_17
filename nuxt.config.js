@@ -20,7 +20,12 @@ export default {
   css: [
     '~assets/css/main.css'
   ],
-
+  styleResources: {
+    scss: [
+      '~assets/scss/mixins.scss',
+      '~assets/scss/variables.scss'
+    ]
+  },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     {
@@ -36,15 +41,35 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/vuetify'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/firebase',
   ],
-
+  firebase: {
+    config: {
+      apiKey: "AIzaSyDaPEPoi-PGSqDEkPB7fPa7sEbor4OuvTk",
+      authDomain: "fetest17.firebaseapp.com",
+      databaseURL: "https://fetest17-default-rtdb.firebaseio.com",
+      projectId: "fetest17",
+      storageBucket: "fetest17.appspot.com",
+      messagingSenderId: "202401363085",
+      appId: "1:202401363085:web:fbea769744722c74bf5ec4",
+      measurementId: "G-R2RYWBBTE0"
+    },
+    services: {
+      database: true,
+    }
+  },
+  database: {
+    emulatorPort: 9000,
+    emulatorHost: 'localhost',
+  },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
@@ -53,11 +78,5 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  },
-  styleResources: {
-    scss: [
-      '~assets/scss/mixins.scss',
-      '~assets/scss/variables.scss'
-    ]
   }
 }
