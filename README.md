@@ -15,6 +15,7 @@
 oading畫面，並未使用排版功能。
 
 |  Header   | 請使用 position: fixed 實作, Icon不需要設定任何動作  |
+|  ----  | ----  |
 |  Input  | 不一定要綁在最下方，可跟著 Todo list 長, 可使用鍵盤的 enter 鍵或是點 button 送出  |
 | 右側送出按鈕 | 送出時，請顯示出 loading 或 skeleton 後等待數秒後 |
 | 垃圾桶  | 需模擬刪除時使用 API 進行刪除的狀況 |
